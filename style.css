@@ -1,0 +1,62 @@
+.wrapper_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header{
+    width: 1200px;
+    background-color: #262350;
+    margin-bottom: 5px;
+}
+.nav a{
+    margin-left: 20px;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: ivory;
+    font-size: 160%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600
+}
+.nav{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.logo {
+    margin: 0 0 -12px -10px; /* Отступы вокруг фотографии */
+}   
+.section{
+    width: 1200px;
+    background-color: #262350;
+    margin-top: -5px;
+    color: ivory;
+    text-align: center;
+    font-size: 160%;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.article{
+    border: 4px solid #262350;
+    padding: 40px 50px 40px 50px;
+    font-size: 115%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #262350;
+}
+.footer{
+    width: 1200px;
+    background-color: #262350;
+    color: #FFD700;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding-left: 50px;
+}
+.font_size{
+    font-size: 160%;
+    margin-bottom: -10px;
+}
+.other_color{
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
