@@ -8,6 +8,29 @@
     margin-right: auto;
     width: 1200px;
 }
+.header{
+   width: unset;
+   margin: 0;
+   padding: 0;
+   background-color: #2a7270;
+}
+.navigation{
+    width: 1400px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.logo--size_s {
+    margin: 0 0 -12px -10px; /* Отступы вокруг фотографии */
+} 
+.navigation a{
+    margin-left: 40px;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: ivory;
+    font-size: 160%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600
+}
 .wrapper_grid{
     width: 1200px;
     background-image: url(/img/main.jpg);
@@ -17,7 +40,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
-.promo{
+.wrapper_grid__promo{
     grid-row: 1/3;
     grid-column: 2/4;
     display: flex;
@@ -28,12 +51,12 @@
     color: white;
     font-weight: bold;
 }
-.main_btn{
+.wrapper_grid__main_btn{
     grid-row: 2/3;
     grid-column: 2/4;
     display: flex;
 }
-.main_btn button{
+.wrapper_grid__main_btn button{
     width: 260px;
     height: 50px;
     margin: 320px 0px 0px 180px;
@@ -41,41 +64,17 @@
     background-color: #2a7270;
     font-size: 140%;
 }
-.social{
+.wrapper_grid__socials{
     grid-row: 3/3;
     grid-column: 4/4;
     margin: 225px 0px 0px 70px;
 }
-.social__img{
+.socials_img{
     width: 50px;
     height: 50px;
     padding: 10px;
 }
-.header{
-   width: unset;
-   margin: 0;
-   padding: 0;
-   background-color: #2a7270;
-
-}
-.nav a{
-    margin-left: 40px;
-    text-decoration: none; /* Отменяем подчеркивание у ссылки */
-    color: ivory;
-    font-size: 160%;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 600
-}
-.nav{
-   width: 1400px;
-    margin-left: 110px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-.logo {
-    margin: 0 0 -12px -10px; /* Отступы вокруг фотографии */
-}   
-.section{
+.content{
     width: 1200px;
     height: 68px;
     background-color: #2a7270;
@@ -85,13 +84,6 @@
     font-weight: bold;
     text-align: center;
     padding-top: 23px;
-    border: 1px solid black;
-}
-.section_2{
-    width: 1200px;
-    text-align: center;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 100%;
     border: 1px solid black;
 }
 .article{
@@ -106,14 +98,21 @@
     text-align: justify;
     width: max-content;
 }
-.wrapper_grid_2{
+.aside{
+    width: 1200px;
+    text-align: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 100%;
+    border: 1px solid black;
+}
+.wrapper_grid_countries{
     width: 1200px;
     height: 1100px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-.moscow{
+.wrapper_grid_countries__moscow{
     grid-row: 1/1;
     grid-column: 1/1;
     display: flex;
@@ -121,7 +120,7 @@
     justify-content: center;
     border: 1px solid black;
 }
-.big_ben{
+.wrapper_grid_countries__big_ben{
     grid-row: 1/1;
     grid-column: 2/2;
     display: flex;
@@ -130,7 +129,7 @@
     border: 1px solid black;
     padding-top: 18px;
 }
-.piramids{
+.wrapper_grid_countries__piramids{
     grid-row: 1/1;
     grid-column: 3/3;
     display: flex;
@@ -139,7 +138,7 @@
     border: 1px solid black;
     padding-top: 50px;
 }
-.north_america{
+.wrapper_grid_countries__north_america{
     grid-row: 2/2;
     grid-column: 1/1;
     display: flex;
@@ -148,7 +147,7 @@
     border: 1px solid black;
     padding-bottom: 15px;
 }
-.south_america{
+.wrapper_grid_countries__south_america{
     grid-row: 2/2;
     grid-column: 2/2;
     display: flex;
@@ -156,13 +155,19 @@
     justify-content: center;
     border: 1px solid black;
 }
-.kangaroo{
+.wrapper_grid_countries__kangaroo{
     grid-row: 2/2;
     grid-column: 3/3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid black;
+}
+.wrapper_grid_countries__img{
+    padding-left: 100px;
+}
+.h3{
+    text-align: center;
 }
 .line{
     border-bottom: 5px solid #f00;
@@ -171,15 +176,9 @@
     margin-left: auto;
     margin-right: auto;
 }
-.h3{
-    text-align: center;
-}
 .h4{
     text-align: center;
    font-weight: normal; 
-}
-.img_country{
-    padding-left: 100px;
 }
 .footer{
     width: 1200px;
@@ -192,14 +191,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-.font_size{
+.footer__first_2_phrases{
     font-size: 100%;
     grid-column: 1/1;
     margin-left: 40px;
     line-height: 0.8;
     margin-top: 20px;
 }
-.other_color{
+.footer__remaining_phrases{
     color: white;
     font-family: 'IBM Plex Sans', sans-serif;
     grid-column: 1/1;
@@ -207,19 +206,19 @@
     margin-left: 40px;
     line-height: 0.8;
 }
-.social_2{
+.footer__socials{
     margin-bottom: -35px;
     margin-left: -10px;
     border-radius: 20px;
 }
-.logo_2{
+.logo--size_b{
     grid-column: 2/2;
     margin-left: auto;
     padding-left: 10px;
     margin-right: auto;
     margin-top: -15%;
 }
-.other_text{
+.footer__section{
     grid-column: 3/3;
     color: white;
     font-family: 'IBM Plex Sans', sans-serif;
