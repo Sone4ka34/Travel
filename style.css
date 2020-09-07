@@ -1,5 +1,6 @@
 :root{
     --bg-color:#2a7270;
+    --bg-color2:white;
     --border-color:black;
     --border-color-2:white;
     --font-color:ivory;
@@ -30,7 +31,21 @@
     margin-bottom: 20px;
     margin-top: 10px;
 }
+@keyframes globus{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);
+    z-index: 999;
+    width: 120px;
+    height: 120px;}
+}
 .logo--size_s {
+    /* z-index: 999;
+    position: relative; не работает, нужно разобраться, чтобы лого не расширяло элемент, а было сверху*/
+    /* animation-name: globus;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   animation-direction: alternate; */
     margin: 0 0 -12px -10px; /* Отступы вокруг фотографии */
 } 
 .navigation a{
@@ -44,11 +59,62 @@
 .wrapper_grid{
     width: 1200px;
     background-image: url(/img/main.jpg);
-    height: 655px;
+    height: 850px;
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.wrapper_form{
+    position: fixed;
+    border: 2px solid var(--border-color);
+    left: 39.5%;
+    width: 300px;
+    top: 200px;
+    height: 300px;
+    background-color: var(--bg-color2);
+    border-radius: 15px;
+    display: none;
+}
+@keyframes gone{
+    0%{opacity: 1;}
+    100%{opacity: 0;
+    margin-top: 200px;}
+}
+.anim_gone{
+    animation: gone 1s;
+}
+.wrapper_form form{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+.wrapper_form form i[class="fa fa-times"] {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper_form form i[class="fa fa-times"]:hover{
+    color: var(--font-color-2);
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.wrapper_form form form input{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.wrapper_form form button[type='submit']{
+    width: 90px;
+    align-self: flex-end;
+    margin-top: 5px;
+    
 }
 .wrapper_grid__promo{
     grid-row: 1/3;
@@ -83,6 +149,64 @@
     width: 50px;
     height: 50px;
     padding: 10px;
+}
+.scroll {
+    height: 40px;
+    border-radius: 15px;
+    width: 20px;
+    border: 4px solid var(--border-color-2);
+    bottom: 30px;
+    grid-row: 4/4;
+    grid-column: 3/3;
+}
+@keyframes scroll{
+    0%{ top: 0; }
+    100%{ bottom: 100%; }
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+.scroll:before {
+    position: relative;
+    content: ".";
+    color: var(--font-color-2);
+    background: var(--bg-color2);
+    width: 8px;
+    height: 12px;
+    top: 25px;
+    margin-left: 8px;
+    border-radius: 4px;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: scroll;
+}
+@keyframes scroll-arrow{
+    100%{ top: 0; }
+    100%{ bottom: 1100px; } 
+}
+.scroll:after {
+  position: absolute;
+    content: ".";
+    width: 5px;
+    height: 5px;
+    top: 5px;
+    border-right: 4px solid var(--border-color-2);
+    border-bottom: 4px solid var(--border-color-2);
+    transform: rotate(45deg);
+    margin-top: 885px;
+    margin-left: -5px;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: scroll-arrow;
 }
 .content{
     width: 1200px;
@@ -220,6 +344,30 @@
     margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+.cookie_wrapper{
+    width: 1200px;
+    height: 150px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    bottom: 0;
+}
+.cookie_wrapper__p{
+    font-size: 30px;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    background-color:var(--bg-color);
+    color: var(--font-color);
+}
+.cookie_wrapper__button{
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    padding: 5px;
 }
 .footer__first_2_phrases{
     font-size: 100%;
@@ -258,7 +406,7 @@
     text-align: right;
     margin-right: 20px;
 }
-.wrapper_grid_popap{
+/* .wrapper_grid_popap{
     width: 1200px;
     display: grid;
     grid-template-columns: 1.5fr 4fr 1.5fr 0.5fr;
@@ -306,4 +454,4 @@
     margin-left: auto;
     margin-right: 0;
     grid-column: 4/4;
-}
+} */

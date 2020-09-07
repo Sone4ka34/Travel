@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="code.js"defer></script>
 </head>
 
 <body>
@@ -20,6 +22,19 @@
             </div>
         </header>
         <div class="wrapper_grid">
+            <div class="wrapper_form">
+                <form action="" method="POST">
+                    <i class="fa fa-times"></i>
+                    <h3>Зарегестрируйтесь</h3>
+                    <label for="Имя">Ваше имя</label>
+                    <input type="text" name="Имя">
+                    <label for="Телефон">Ваш телефон</label>
+                    <input type="tel" name="Телефон" required>
+                    <label for="Email">Ваша электронный адрес</label>
+                    <input type="email" name="Email" id="">
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
             <hi class="wrapper_grid__promo">Только красивые путешествия</hi>
             <div class="wrapper_grid__main_btn">
                 <button>Присоединиться</button>
@@ -29,6 +44,7 @@
                 <img src="/img/facebook.png" alt="" class="socials_img">
                 <img src="/img/instagram.png" alt="" class="socials_img">
             </div>
+            <div class="scroll"></div>
         </div>
         <div class="content">
             Путешествуй красиво! Блог в фотографиях!
@@ -107,6 +123,11 @@
             </div>
         </div>
         <footer class="footer">
+            <div class="cookie_wrapper">
+                <img src="/img/cookie-clipart-logo-png-cookies-logo-design-png.png" alt="" width=50px class="cookie_wrapper__img">
+                <p class="cookie_wrapper__p">Сайт использует cookie</p>
+                <button class="cookie_wrapper__button">Смириться</button>
+            </div>
             <div class="footer__first_2_phrases">
                 <h3 class="">Мы рядом с вами</h3>
                 <p>Москва, ул. Героев Труда, 6</p>
@@ -131,7 +152,7 @@
                 <p>Путешествия по Швеции</p>
             </div>
         </footer>
-        <div class="popap">
+        <!-- <div class="popap">
             <div class="wrapper_grid_popap">
                 <img src="/img/cookie-clipart-logo-png-cookies-logo-design-png.png" alt="" width="100px"
                     class="popap__img">
@@ -143,9 +164,7 @@
                 </div>
                 <img src="/img/heavy-multiplication-x_2716 (1).png" alt="" width="30px" class="popap__img_2">
             </div>
-        </div>
-    </div>
+        </div> -->
     </div>
 </body>
-
 </html>
