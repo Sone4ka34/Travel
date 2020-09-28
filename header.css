@@ -1,0 +1,41 @@
+.header {
+    width: unset;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+  }
+  .navigation {
+    width: 1400px;
+    margin-left: 110px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  @keyframes globus {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+      z-index: 999;
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .logo--size_s {
+    /* z-index: 999;
+      position: relative; не работает, нужно разобраться, чтобы лого не расширяло элемент, а было сверху*/
+    /* animation-name: globus;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+     animation-direction: alternate; */
+    margin: 0 0 -12px -10px; /* Отступы вокруг фотографии */
+  }
+  .navigation a {
+    margin-left: 40px;
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: var(--font-color);
+    font-size: 160%;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+  }
