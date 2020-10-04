@@ -45,6 +45,15 @@ let line = document.querySelectorAll(".line");
 for (let i = 0; i < line.length; i++) {
   line[i].onclick = () => {
     line[i].classList.toggle("transform_line");
- 
   };
 }
+// делаем часы
+let whatch = document.createElement("div");
+whatch.classList.add("whatch");
+document.querySelector(".header").append(whatch);
+// let time = new Date();
+// whatch.innerHTML = `${time.getSeconds()}`
+setInterval(() => {
+  let today = new Date();
+  whatch.innerHTML = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+}, 1000);
