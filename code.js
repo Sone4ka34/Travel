@@ -51,9 +51,28 @@ for (let i = 0; i < line.length; i++) {
 let whatch = document.createElement("div");
 whatch.classList.add("whatch");
 document.querySelector(".header").append(whatch);
-// let time = new Date();
-// whatch.innerHTML = `${time.getSeconds()}`
 setInterval(() => {
   let today = new Date();
-  whatch.innerHTML = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+  whatch.innerHTML = `${today.getDate()}.${today.getMonth()+1}.${today.getFullYear()} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
+  // whatch.innerHTML = today.getHours()+today.getMinutes()+today.getSeconds()
 }, 1000);
+
+// let Petya = {
+//     name: "Petya",
+//     surname: "Petrov",
+//     programming: function (){
+//         alert ("Я программирую");
+//     }
+// }
+// // Petya - объект
+// // типы данных в js = строки (в двойных кавычках), число, symbols, объекты, function, boolean, undefined, null
+// // строка у Пети
+// let autumn = ["Сентябрь", "Ноябрь", "Октябрь"];
+// console.table(Petya);
+// console.table(autumn);
+// // у осени число
+// // отличие объекта от массива тем, что у массива автоматически создается ключ числового типа + разные свойства
+// let superPetya = Petya;
+// superPetya.run = function (){
+//     alert ("Он очень быстро бегает");
+// }
